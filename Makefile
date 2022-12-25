@@ -9,7 +9,7 @@ help: ## Display this help
 
 ## @ Linter
 .PHONY: lint format
-lint:  ## Run golangci-lint
+lint:  ## Run eslint
 	@yarn run eslint --ext .js,.vue src
 
 format:  ## Format code
@@ -20,6 +20,6 @@ format:  ## Format code
 run:  ## Run project
 	@yarn run serve
 
-docker:  ## Build a docker image
+docker/build:  ## Build a docker image
 	@docker build -t sorveteria-tres-estrelas-frontend .
 
