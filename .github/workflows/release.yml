@@ -37,14 +37,14 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v3
         with:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          args: |
-            --build-arg VUE_APP_API_URL=${{ secrets.BACKEND_URL }}
+          build-args:
+            VUE_APP_API_URL=$${{ secrets.BACKEND_API_URL }}
 
   deploy:
     runs-on: ubuntu-latest
