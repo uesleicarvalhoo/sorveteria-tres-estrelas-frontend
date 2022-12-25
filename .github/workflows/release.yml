@@ -43,7 +43,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args:
+          build-arg:
             VUE_APP_API_URL=$${{ secrets.BACKEND_API_URL }}
 
   deploy:
