@@ -12,7 +12,7 @@ RUN yarn install --frozen-lockfile
 # Copy rest of the files
 COPY . .
 
-ENV VUE_APP_API_URL
+ENV VUE_APP_API_URL=
 
 # Build the project
 RUN yarn run build
