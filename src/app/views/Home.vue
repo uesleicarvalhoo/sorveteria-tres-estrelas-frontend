@@ -56,7 +56,7 @@ export default {
 
     const totalSales = computed(() => (context.state.cashFlow.total_sales))
 
-    const totalPayments = computed(() => (context.state.cashFlow.total_sales))
+    const totalPayments = computed(() => (context.state.cashFlow.total_payments))
 
     const balance = computed(() => context.state.cashFlow.balance)
 
