@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       <tr v-for="item in itemsPaginated" :key="item.id">
-        <td data-label="Código">{{ item.code }}</td>
+        <td data-label="Código">{{ item.id }}</td>
         <td class="text-center" data-label="Descrição">{{ item.name }}</td>
         <td class="text-center" data-label="Valor Varejo">
           R$ {{ item.price_varejo }}

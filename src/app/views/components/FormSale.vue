@@ -30,9 +30,9 @@
         <tbody>
           <tr v-for="(item, index) in form.items">
             <td data-label="Descrição" class="text-center">{{ item.name }}</td>
-            <td data-label="Código" class="text-center">{{ item.amount }}</td>
-            <td data-label="Valor" class="text-center">R$ {{ item.unit_price.toFixed(2) }}</td>
-            <td data-label="Quantidade" class="text-center">
+            <td data-label="Quantidade" class="text-center">{{ item.amount }}</td>
+            <td data-label="Valor unitário" class="text-center">R$ {{ item.unit_price.toFixed(2) }}</td>
+            <td data-label="Sub total" class="text-center">
               R$ {{ (item.amount * item.unit_price).toFixed(2) }}
             </td>
             <td class="actions-cell items-center justify-between">
